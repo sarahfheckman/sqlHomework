@@ -152,13 +152,13 @@ GROUP BY title
 ORDER BY "Times Rented" DESC;
 
 -- 7F
-SELECT store.store_id "Store", SUM(payment.amount) "Gross Revenue"
-FROM store
+SELECT s.store_id "Store", SUM(p.amount) "Gross Revenue"
+FROM store s
 INNER JOIN store ON 
-store.store_id = customer.store_id
-INNER JOIN customer ON
-customer.customer_id = payment.payment_id
-GROUP BY store_id;
+s.store_id = c.store_id
+INNER JOIN customer c ON
+c.customer_id = p.payment_id 
+GROUP BY s.store_id;
 
 -- 7G
 SELECT country
@@ -183,4 +183,10 @@ SELECT country
         
 -- 7h
 
-        
+
+-- 8a
+-- I am not sure what this question is asking.
+-- 8b
+-- I am not sure what this question is asking.
+-- 8c
+-- I am not sure I understand why this is necessary? Why would you write a query to delete something when you could literally just delete it.
