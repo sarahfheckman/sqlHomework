@@ -1,1 +1,2 @@
-# sqlHomework
+# sqlPractice
+SQL basics
